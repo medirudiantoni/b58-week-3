@@ -6,7 +6,7 @@ const projectRouter = require('../router/projectRouter');
 const userRouter = require('../router/userRouter');
 const session = require('express-session');
 const flash = require('express-flash');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 
 app.set("view engine", "hbs"); 
