@@ -6,7 +6,8 @@ const projectRouter = require('../router/projectRouter');
 const userRouter = require('../router/userRouter');
 const session = require('express-session');
 const flash = require('express-flash');
-const port = 4000;
+const PORT = process.env.PORT || 3000;
+
 
 app.set("view engine", "hbs"); 
 app.use(express.json());
@@ -103,4 +104,6 @@ function test(req, res){
     res.render('testing.hbs', {id: id ? `: ${id}` : null})
 } 
 
-app.listen(port, () => console.log('Running on port: ' + port));
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
